@@ -14,9 +14,9 @@
 
 use Webman\Route;
 
+Route::get('/', 'app\controller\Index@index');
 
 Route::any('/test', function ($request) {
     return response('test');
 });
 
-Route::any('/', 'app\controller\Index@index');
