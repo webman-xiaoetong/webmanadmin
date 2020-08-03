@@ -19,7 +19,7 @@ use Illuminate\Database\Capsule\Manager;
  * Class Db
  * @package support
  */
-class Db extends Manager
+class DB extends Manager
 {
 
 }
