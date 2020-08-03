@@ -1,27 +1,27 @@
 {
-  "name": "workerman/webman",
-  "type": "library",
+  "name": "webmanadmin/webmanadmin",
+  "type": "Framework",
   "keywords": [
     "high performance",
     "http service"
   ],
-  "homepage": "http://www.workerman.net",
+  "homepage": "https://github.com/webmanadmin/webmanadmin",
   "license": "MIT",
-  "description": "High performance HTTP Service Framework.",
+  "description": "High performance Web RBAC-Admin Framework.",
   "authors": [
     {
-      "name": "walkor",
-      "email": "walkor@workerman.net",
-      "homepage": "http://www.workerman.net",
+      "name": "webmanadmin",
+      "email": "webmanadmin@webmanadmin.net",
+      "homepage": "https://github.com/webmanadmin/webmanadmin",
       "role": "Developer"
     }
   ],
   "support": {
-    "email": "walkor@workerman.net",
-    "issues": "https://github.com/walkor/webman/issues",
-    "forum": "http://wenda.workerman.net/",
-    "wiki": "http://workerman.net/doc/webman",
-    "source": "https://github.com/walkor/webman"
+    "email": "webmanadmin@webmanadmin.net",
+    "issues": "https://github.com/webmanadmin/webmanadmin/issues",
+    "forum": "https://github.com/webmanadmin/webmanadmin/issues",
+    "wiki": "https://github.com/webmanadmin/webmanadmin/wiki",
+    "source": "https://github.com/webmanadmin/webmanadmin/"
   },
   "require": {
     "php": ">=7.2",
