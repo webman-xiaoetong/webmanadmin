@@ -12,6 +12,14 @@ use support\Request;
  */
 class MenuController extends Controller
 {
+    public function clear()
+    {
+
+        return json([
+            "code" => 1,
+            "msg" => "服务端清理缓存成功"
+        ]);
+    }
 
 // 获取初始化数据
     public function getSystemInit()
@@ -23,8 +31,11 @@ class MenuController extends Controller
         $logoInfo = [
             'title' => 'LAYUI MINI',
             'image' => 'images/logo.png',
+            'href' => ''
         ];
+
         $menuInfo = $this->getMenuList();
+
         $systemInit = [
             'homeInfo' => $homeInfo,
             'logoInfo' => $logoInfo,
