@@ -1,5 +1,5 @@
 <?php
-namespace app\model\web;
+namespace app\web\model;
 
 use support\Model;
 
