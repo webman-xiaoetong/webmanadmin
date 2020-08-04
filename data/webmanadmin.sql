@@ -1,3 +1,10 @@
+
+-- ----------------------------
+-- create database webmanadmin
+-- ----------------------------
+CREATE DATABASE `webmanadmin` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ;
+use `webmanadmin`;
+
 -- ----------------------------
 -- Table structure for positions
 -- ----------------------------
