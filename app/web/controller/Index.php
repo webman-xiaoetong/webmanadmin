@@ -1,5 +1,5 @@
 <?php
-namespace app\controller\web;
+namespace app\web\controller;
 
 use support\Request;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace app\controller\behind;
+namespace app\behind\controller;
 
-use app\controller\Controller;
+use app\Controller;
 use support\Request;
 
 class User extends Controller

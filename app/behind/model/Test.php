@@ -1,5 +1,5 @@
 <?php
-namespace app\model\behind;
+namespace app\behind\model;
 
 use support\Model;
 
