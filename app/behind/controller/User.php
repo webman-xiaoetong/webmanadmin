@@ -1,10 +1,11 @@
 <?php
 
-namespace app\controller;
+namespace app\controller\behind;
 
+use app\controller\Controller;
 use support\Request;
 
-class User
+class User extends Controller
 {
     public function hello(Request $request)
     {
@@ -18,7 +19,7 @@ class User
             return response('hello ' . $name);
         } else if ($t == 'html') {
             return view('user/hello', ['name' => $name]);
-        }else if ($t='file'){
+        } else if ($t = 'file') {
 //            return response()->file(public_path() . '/favicon.ico');
             return response()->download(public_path() . '/favicon.ico', '可选的文件名.ico');
         }

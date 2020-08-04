@@ -1,7 +1,8 @@
 <?php
 
-namespace app\controller;
+namespace app\controller\behind;
 
+use app\controller\Controller;
 use support\Db;
 use support\Request;
 
@@ -10,7 +11,7 @@ use support\Request;
  * Class MenuController
  * @package app\controller
  */
-class MenuController extends Controller
+class Menu extends Controller
 {
     public function clear()
     {
