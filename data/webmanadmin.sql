@@ -113,7 +113,7 @@ CREATE TABLE `members` (
 `created_at` timestamp NULL DEFAULT NULL,
 `updated_at` timestamp NULL DEFAULT NULL,
 PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='前台会员表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='前台会员表';
 
 -- ----------------------------
 -- Table structure for sites
@@ -148,4 +148,25 @@ PRIMARY KEY (`id`),
 UNIQUE KEY `users_username_unique` (`username`),
 UNIQUE KEY `users_phone_unique` (`phone`),
 UNIQUE KEY `users_email_unique` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=240 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='后台用户表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='后台用户表';
+
+
+DROP TABLE IF EXISTS `system_menu`;
+CREATE TABLE `system_menu` (
+`id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT 'ID',
+`pid` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '父ID',
+`title` varchar(100) NOT NULL DEFAULT '' COMMENT '名称',
+`icon` varchar(100) NOT NULL DEFAULT '' COMMENT '菜单图标',
+`href` varchar(100) NOT NULL DEFAULT '' COMMENT '链接',
+`target` varchar(20) NOT NULL DEFAULT '_self' COMMENT '链接打开方式',
+`sort` int(11) DEFAULT '0' COMMENT '菜单排序',
+`status` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '状态(0:禁用,1:启用)',
+`remark` varchar(255) DEFAULT NULL COMMENT '备注信息',
+`create_at` timestamp NULL DEFAULT NULL COMMENT '创建时间',
+`update_at` timestamp NULL DEFAULT NULL COMMENT '更新时间',
+`delete_at` timestamp NULL DEFAULT NULL COMMENT '删除时间',
+PRIMARY KEY (`id`),
+KEY `title` (`title`),
+KEY `href` (`href`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='系统菜单表';
+
