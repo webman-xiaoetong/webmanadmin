@@ -16,22 +16,23 @@ return [
 
     //全局中间件
     '' => [
-//        support\middleware\StaticFile::class,
+        support\middleware\StaticFile::class,
 //        support\middleware\AuthCheckTest::class,
-//        support\middleware\AccessControlTest::class,
+//        support\middleware\ApiCrossCheck::class,
     ],
 
-    //各个模块的中间件配置
-    'web' => [
-
+    // api应用中间件(应用中间件仅在多应用模式下有效)
+    'api' => [
+//        support\middleware\ApiCrossCheck::class,
+//        support\middleware\ApiAuthCheck::class,
     ],
 
     'behind' => [
-
+        support\middleware\BehindAuthCheck::class,
     ],
 
-    'api' => [
-//        support\middleware\ApiOnly::class,
-    ]
+    'web' => [
+        //support\middleware\ApiAuthCheck::class,
+    ],
 
 ];

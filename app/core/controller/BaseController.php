@@ -1,15 +1,15 @@
 <?php
 
-namespace app;
+namespace app\core\controller;
 
 use support\Request;
 
 /**
  * 控制器基类
- * Class Controller
- * @package app\controller
+ * Class webBase
+ * @package app\webBase
  */
-class Controller
+class BaseController
 {
     public function __construct()
     {

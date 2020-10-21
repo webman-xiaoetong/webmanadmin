@@ -1,6 +1,7 @@
 <?php
 
-namespace app\behind\model;
+namespace app\api\model;
+
 
 use app\core\model\BaseModel;
 

@@ -3,14 +3,14 @@
 namespace app\behind\controller;
 
 use support\Request;
-use app\Controller as BaseController;
+use app\core\controller\BaseController;
 
 /**
  * 控制器基类
- * Class Controller
- * @package app\controller
+ * Class BehindBase
+ * @package app\behind\webBase
  */
-class Controller extends BaseController
+class BehindBase extends BaseController
 {
     public function __construct()
     {

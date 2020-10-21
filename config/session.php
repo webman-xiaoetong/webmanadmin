@@ -14,24 +14,28 @@
 
 return [
 
-    'type'    => 'file', // or redis
+    'type' => 'file', // or redis
 
-//    'handler' => Webman\FileSessionHandler::class,
-    'handler' => Webman\RedisSessionHandler::class,
+    'handler' => Webman\FileSessionHandler::class,
+//    'handler' => Webman\RedisSessionHandler::class,
 
     'config' => [
         'file' => [
             'save_path' => runtime_path() . '/sessions',
         ],
         'redis' => [
-            'host'      => '127.0.0.1',
-            'port'      => 6379,
-            'auth'      => '',
-            'timeout'   => 2,
-            'database'  => '',
-            'prefix'    => 'redis_session_',
+            'host' => '127.0.0.1',
+            'port' => 6379,
+            'auth' => '',
+            'timeout' => 2,
+            'database' => '',
+            'prefix' => 'redis_session_',
         ],
     ],
 
     'session_name' => 'PHPSID',
+
+    //后台session前缀
+    'behind_prefix' => 'behind',
+
 ];

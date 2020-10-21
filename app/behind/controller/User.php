@@ -2,10 +2,10 @@
 
 namespace app\behind\controller;
 
-use app\Controller;
+use app\core\controller\BaseController;
 use support\Request;
 
-class User extends Controller
+class User extends BaseController
 {
     public function hello(Request $request)
     {

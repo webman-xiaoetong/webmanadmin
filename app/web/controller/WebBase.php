@@ -2,15 +2,15 @@
 
 namespace app\web\controller;
 
+use app\core\controller\BaseController;
 use support\Request;
-use app\Controller as BaseController;
 
 /**
  * 控制器基类
- * Class Controller
- * @package app\controller
+ * Class webBase
+ * @package app\webBase
  */
-class Controller extends BaseController
+class WebBase extends BaseController
 {
     public function __construct()
     {

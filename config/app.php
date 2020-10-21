@@ -13,6 +13,7 @@
  */
 
 return [
+    'name' => env('APP_NAME', 'Frans'),
     'debug' => env('APP_DEBUG', false),
     'default_timezone' => 'Asia/Shanghai',
 ];

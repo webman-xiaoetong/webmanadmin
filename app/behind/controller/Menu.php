@@ -2,16 +2,16 @@
 
 namespace app\behind\controller;
 
-use app\Controller;
+use app\core\controller\BaseController;
 use support\Db;
 use support\Request;
 
 /**
  * 菜单
  * Class MenuController
- * @package app\controller
+ * @package app\webBase
  */
-class Menu extends Controller
+class Menu extends BaseController
 {
     public function clear()
     {

@@ -2,24 +2,14 @@
 
 namespace app\behind\controller;
 
-use app\Controller;
 use support\Request;
+use app\core\controller\BaseController;
 
-class Index extends Controller
+class Index extends BaseController
 {
     public function index(Request $request)
     {
-        return response('hello webman');
-    }
-
-    public function view(Request $request)
-    {
-        return view('index/view', ['name' => 'webman']);
-    }
-
-    public function json(Request $request)
-    {
-        return json(['code' => 0, 'msg' => 'ok']);
+        return view('index/index', ['name' => 'webman']);
     }
 
     public function file(Request $request)

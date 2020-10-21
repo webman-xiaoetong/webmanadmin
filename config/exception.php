@@ -14,4 +14,4 @@
 
 return [
     '' => support\exception\Handler::class,
-];
+ ];
