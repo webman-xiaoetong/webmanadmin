@@ -2,44 +2,83 @@
 
 namespace app\behind\controller;
 
-use app\core\controller\BaseController;
+use app\behind\model\TagModel;
 use support\Request;
 
-class User extends BaseController
+class User extends BehindBase
 {
-    public function hello(Request $request)
+
+    public function index()
     {
-        $default_name = 'webman';
-        // 从get请求里获得name参数，如果没有传递name参数则返回$default_name
-        $name = $request->get('name', $default_name);
-        $t = $request->get('t', 'txt');
-
-        if ($t == 'txt') {
-            // 向浏览器返回字符串
-            return response('hello ' . $name);
-        } else if ($t == 'html') {
-            return view('user/hello', ['name' => $name]);
-        } else if ($t = 'file') {
-//            return response()->file(public_path() . '/favicon.ico');
-            return response()->download(public_path() . '/favicon.ico', '可选的文件名.ico');
-        }
-        return json([
-            'code' => 0,
-            'msg' => 'ok',
-            'data' => $name
-        ]);
-
+        return view('admin.tag.index');
     }
 
-    public function file(request $request)
+    public function data(Request $request)
     {
-        $file = $request->file('upload');
-        if ($file && $file->isValid()) {
-            $file->move(public_path() . '/files/myfile.' . $file->getUploadExtension());
-            return json(['code' => 0, 'msg' => 'upload success']);
-        }
+        $res = TagModel::orderBy('id', 'desc')->orderBy('sort', 'desc')->paginate($request->get('limit', 30))->toArray();
+        $data = [
+            'code' => 0,
+            'msg' => '正在请求中...',
+            'count' => $res['total'],
+            'data' => $res['data']
+        ];
+        return json($data);
+    }
 
-        return json(['code' => 1, 'msg' => 'file not found']);
+
+    public function create()
+    {
+        return view('admin.tag.create');
+    }
+
+    public function store(Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'required|string',
+            'sort' => 'required|numeric'
+        ]);
+        if (TagModel::create($request->all())) {
+            return redirect(route('admin.tag'))->with(['status' => '添加完成']);
+        }
+        return redirect(route('admin.tag'))->with(['status' => '系统错误']);
+    }
+
+
+    public function show($id)
+    {
+        //
+    }
+
+    public function edit($id)
+    {
+        $tag = TagModel::findOrFail($id);
+        return view('admin.tag.edit', compact('tag'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $this->validate($request, [
+            'name' => 'required|string',
+            'sort' => 'required|numeric'
+        ]);
+        $tag = TagModel::findOrFail($id);
+        if ($tag->update($request->only(['name', 'sort']))) {
+            return redirect(route('admin.tag'))->with(['status' => '更新成功']);
+        }
+        return redirect(route('admin.tag'))->withErrors(['status' => '系统错误']);
+    }
+
+
+    public function destroy(Request $request)
+    {
+        $ids = $request->get('ids');
+        if (empty($ids)) {
+            return json(['code' => 1, 'msg' => '请选择删除项']);
+        }
+        if (TagModel::destroy($ids)) {
+            return json(['code' => 0, 'msg' => '删除成功']);
+        }
+        return json(['code' => 1, 'msg' => '删除失败']);
     }
 
 

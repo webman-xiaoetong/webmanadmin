@@ -2,6 +2,8 @@
 
 namespace app\core\controller;
 
+use support\Request;
+
 /**
  * 控制器基类
  * Class webBase
@@ -18,5 +20,11 @@ class BaseController
     // 初始化
     protected function initialize()
     {
+    }
+
+
+    protected function validate(Request $request, $rule = [], $msg = [])
+    {
+
     }
 }

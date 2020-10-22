@@ -1,8 +1,5 @@
 @extends('behind.view.base')
 
-
-
-
 @section('content')
     <style>
         .layui-top-box {padding:40px 20px 20px 20px;color:#fff}
