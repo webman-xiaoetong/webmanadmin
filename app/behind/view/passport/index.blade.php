@@ -331,7 +331,7 @@
     </div>
 </div>
 <div class="footer">
-    ©版权所有 2014-2018 叁贰柒工作室<span class="padding-5">|</span><a target="_blank" href="http://www.miitbeian.gov.cn">粤ICP备16006642号-2</a>
+    ©版权所有 2020-2020 Frans工作室
 </div>
 <script src="/lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
 <script>
@@ -381,7 +381,7 @@
             $.post('/behind/passport/login', data, function (res) {
 
                 if (res.code == 200) {
-                    layer.msg('登录成功', function () {
+                    layer.msg('登录成功，正在跳转.....', function () {
                         window.location = '/behind/index';
                     });
                 }

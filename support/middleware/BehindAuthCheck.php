@@ -28,13 +28,13 @@ class BehindAuthCheck implements MiddlewareInterface
 
     public function process(Request $request, callable $next): Response
     {
-        $controller = $request->controller;
-        $controller = explode('\\', $controller);
+        $controller = explode('\\', $request->controller);
         $controller_name = array_pop($controller);
 
         $session_prefix = config('session.behind_prefix');
 
-        if (!$request->session()->get($session_prefix . 'user') && !in_array($controller_name, self::CONTROLLER)) {
+        $user = $request->session()->get($session_prefix . 'user');
+        if (!$user && !in_array($controller_name, self::CONTROLLER)) {
             return redirect('/behind/login');
         }
 

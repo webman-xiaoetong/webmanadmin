@@ -12,9 +12,8 @@ use app\core\controller\BaseController;
  */
 class ApiBase extends BaseController
 {
-    public function __construct()
+    protected function initialize()
     {
-        parent::__construct();
 
     }
 

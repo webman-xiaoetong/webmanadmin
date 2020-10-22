@@ -10,9 +10,7 @@ class Passport extends BehindBase
 
     public function __construct()
     {
-
         parent::__construct();
-
         $this->session_key = config('session.behind_prefix') . 'user';
     }
 
@@ -43,7 +41,7 @@ class Passport extends BehindBase
     public function logout(Request $request)
     {
         $request->session()->delete($this->session_key);
-        return redirect("/behind");
+        return json(['code' => 200, 'msg' => 'OK', 'data' => []]);
     }
 
 }

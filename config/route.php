@@ -23,6 +23,7 @@ use Webman\Route;
 |
 */
 Route::get('/behind/login', 'app\behind\controller\Passport@index');
+Route::get('/behind/logout', 'app\behind\controller\Passport@logout');
 
 //Route::any('/test', function ($request) {
 //    return response('test');

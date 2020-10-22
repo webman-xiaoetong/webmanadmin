@@ -3,13 +3,18 @@
 namespace app\behind\controller;
 
 use support\Request;
-use app\core\controller\BaseController;
 
-class Index extends BaseController
+class Index extends BehindBase
 {
-    public function index(Request $request)
+
+    public function index()
     {
-        return view('index/index', ['name' => 'webman']);
+        return view('index/index');
+    }
+
+    public function welcome()
+    {
+        return view('index/welcome');
     }
 
     public function file(Request $request)

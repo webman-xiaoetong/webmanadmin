@@ -2,8 +2,6 @@
 
 namespace app\core\controller;
 
-use support\Request;
-
 /**
  * 控制器基类
  * Class webBase
@@ -13,7 +11,12 @@ class BaseController
 {
     public function __construct()
     {
-
+        // 控制器初始化
+        $this->initialize();
     }
 
+    // 初始化
+    protected function initialize()
+    {
+    }
 }

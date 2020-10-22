@@ -12,9 +12,8 @@ use support\Request;
  */
 class WebBase extends BaseController
 {
-    public function __construct()
+    protected function initialize()
     {
-        parent::__construct();
 
     }
 

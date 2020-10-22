@@ -11,7 +11,7 @@ use support\Request;
  * Class MenuController
  * @package app\webBase
  */
-class Menu extends BaseController
+class Menu extends BehindBase
 {
     public function clear()
     {

@@ -12,9 +12,9 @@ use app\core\controller\BaseController;
  */
 class BehindBase extends BaseController
 {
-    public function __construct()
+
+    protected function initialize()
     {
-        parent::__construct();
 
     }
 
