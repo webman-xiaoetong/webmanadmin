@@ -115,12 +115,13 @@
             var $ = layui.jquery,
                 layer = layui.layer,
                 miniAdmin = layui.miniAdmin;
-            //miniTongji = layui.miniTongji;
+
 
             var options = {
-                iniUrl: "/api/init.json",    // 初始化接口
-                clearUrl: "/api/clear.json", // 缓存清理接口
-                urlHashLocation: true,      // 是否打开hash定位
+                // iniUrl: "/api/init.json",    // 初始化接口
+                iniUrl: "/behind/menu/index",    // 初始化接口
+                clearUrl: "/behind/clear", // 缓存清理接口
+                urlHashLocation: false,      // 是否打开hash定位
                 bgColorDefault: false,      // 主题默认配置
                 multiModule: true,          // 是否开启多模块
                 menuChildOpen: false,       // 是否默认展开菜单
@@ -130,20 +131,11 @@
             };
             miniAdmin.render(options);
 
-            // 百度统计代码，只统计指定域名
-            // miniTongji.render({
-            //     specific: true,
-            //     domains: [
-            //         '99php.cn',
-            //         'layuimini.99php.cn',
-            //         'layuimini-onepage.99php.cn',
-            //     ],
-            // });
-
+            //注销
             $('.login-out').on("click", function () {
 
                 //AJAX请求后端
-                $.get('/behind/passport/logout', function (res) {
+                $.get('/behind/logout', function (res) {
                     if (res.code == 200) {
                         layer.msg('退出登录成功', function () {
                             window.location = '/behind';

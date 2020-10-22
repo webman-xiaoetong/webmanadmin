@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>layuimini-@yield('title')</title>
+    <title>后台管理</title>
     <meta name="keywords" content="layuimini,layui,layui模板,layui后台,后台模板,admin,admin模板,layui mini">
     <meta name="description" content="layuimini基杂操作。">
     <meta name="renderer" content="webkit">
@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="/css/layuimini.css?v=2.0.4.2" media="all">
     <link rel="stylesheet" href="/css/themes/default.css" media="all">
     <link rel="stylesheet" href="/lib/font-awesome-4.7.0/css/font-awesome.min.css" media="all">
+    <link rel="stylesheet" href="/css/public.css" media="all">
     <!--[if lt IE 9]>
     <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
     <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
@@ -51,19 +52,19 @@
     //     var upload = layui.upload;
     //     var laydate = layui.laydate;
 
-        //错误提示
-{{--        @if(count($errors)>0)--}}
-{{--        @foreach($errors->all() as $error)--}}
-{{--        layer.msg("{{$error}}",{icon:5});--}}
-{{--        @break--}}
-{{--        @endforeach--}}
-{{--        @endif--}}
+    //错误提示
+    {{--        @if(count($errors)>0)--}}
+    {{--        @foreach($errors->all() as $error)--}}
+    {{--        layer.msg("{{$error}}",{icon:5});--}}
+    {{--        @break--}}
+    {{--        @endforeach--}}
+    {{--        @endif--}}
 
-        //信息提示
-{{--        @if(session('status'))--}}
-{{--        layer.msg("{{session('status')}}",{icon:6});--}}
-{{--        @endif--}}
-//     });
+    //信息提示
+    {{--        @if(session('status'))--}}
+    {{--        layer.msg("{{session('status')}}",{icon:6});--}}
+    {{--        @endif--}}
+    //     });
 
 
 </script>

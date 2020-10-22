@@ -24,6 +24,8 @@ use Webman\Route;
 */
 Route::get('/behind/login', 'app\behind\controller\Passport@index');
 Route::get('/behind/logout', 'app\behind\controller\Passport@logout');
+Route::get('/behind/clear', 'app\behind\controller\Index@clear');
+Route::get('/behind/welcome', 'app\behind\controller\Index@welcome');
 
 //Route::any('/test', function ($request) {
 //    return response('test');

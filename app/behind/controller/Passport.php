@@ -6,14 +6,6 @@ use support\Request;
 
 class Passport extends BehindBase
 {
-    private $session_key;
-
-    public function __construct()
-    {
-        parent::__construct();
-        $this->session_key = config('session.behind_prefix') . 'user';
-    }
-
     public function index(Request $request)
     {
         //已经登录直接跳转
