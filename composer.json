@@ -35,7 +35,8 @@
     "jenssegers/blade": "^1.4",
     "ext-json": "*",
     "ext-simplexml": "*",
-    "ext-zend-opcache": "*"
+    "ext-zend-opcache": "*",
+    "casbin/casbin": "^2.3"
   },
   "suggest": {
     "ext-event": "For better performance. "
