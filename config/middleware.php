@@ -16,7 +16,6 @@ return [
 
     //全局中间件
     '' => [
-        support\middleware\StaticFile::class,
 //        support\middleware\AuthCheckTest::class,
 //        support\middleware\ApiCrossCheck::class,
     ],

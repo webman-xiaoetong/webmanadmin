@@ -28,7 +28,7 @@ class BehindBase extends BaseController
             'href' => '/behind/welcome?t=1',
         ];
         $logoInfo = [
-            'title' => 'Frans Admin',
+            'title' => config('app.name'),
             'image' => '/images/logo.png',
             'href' => '/behind'
         ];
@@ -43,7 +43,6 @@ class BehindBase extends BaseController
 
         //TODO: 缓存下 menu 菜单：
 
-
         return $systemInit;
 
         //return json($systemInit);
@@ -52,7 +51,7 @@ class BehindBase extends BaseController
     // 获取菜单列表
     private function getMenuList()
     {
-//        $menuList = DB::table('system_menu')
+
         $menuList = PermissionModel::query()
             ->select(['id', 'pid', 'title', 'icon', 'href', 'target'])
             ->where('status', 1)

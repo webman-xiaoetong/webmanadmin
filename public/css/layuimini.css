@@ -87,7 +87,7 @@
 
 .layui-layout-admin .layuimini-logo h1 {
     display: inline-block;
-    margin: 0 0 0 12px;
+    /*margin: 0 0 0 12px;*/
     color: #ffffff;
     font-weight: 600;
     font-size: 20px;
