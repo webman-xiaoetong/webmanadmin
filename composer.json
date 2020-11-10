@@ -36,12 +36,16 @@
     "ext-json": "*",
     "ext-simplexml": "*",
     "ext-zend-opcache": "*",
-    "casbin/casbin": "^2.3"
+    "casbin/casbin": "^2.3",
+    "symfony/console": "^5.1"
   },
   "suggest": {
     "ext-event": "For better performance. "
   },
   "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    },
     "files": [
       "./support/helpers.php"
     ]

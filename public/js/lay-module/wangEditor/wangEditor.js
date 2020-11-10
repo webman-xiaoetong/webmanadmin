@@ -641,7 +641,7 @@ var config = {
     // onchange 事件
     // onchange: function (html) {
     //     // html 即变化之后的内容
-    //     console.log(html)
+    //     Console.log(html)
     // },
 
     // 是否显示添加网络图片的 tab
@@ -649,7 +649,7 @@ var config = {
 
     // 插入网络图片的回调
     linkImgCallback: function linkImgCallback(url) {
-        // console.log(url)  // url 即插入图片的地址
+        // Console.log(url)  // url 即插入图片的地址
     },
 
     // 默认上传图片 max size: 5M
@@ -686,7 +686,7 @@ var config = {
     // 上传图片 hook 
     uploadImgHooks: {
         // customInsert: function (insertLinkImg, result, editor) {
-        //     console.log('customInsert')
+        //     Console.log('customInsert')
         //     // 图片上传并返回结果，自定义插入图片的事件，而不是编辑器自动插入图片
         //     const data = result.data1 || []
         //     data.forEach(link => {

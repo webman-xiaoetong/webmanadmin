@@ -46,7 +46,7 @@ layui.define(["jquery", "miniMenu", "element","miniTab", "miniTheme"], function 
                     miniAdmin.error('暂无菜单信息')
                 } else {
 
-                    //console.log(data);
+                    //Console.log(data);
 
                     miniAdmin.renderLogo(data.logoInfo);
                     miniAdmin.renderClear(options.clearUrl);
